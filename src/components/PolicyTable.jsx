@@ -7,6 +7,20 @@ const PolicyTable = ({ policies, onSort, sort }) => {
     );
   }
 
+  // 🟢 Row color based on status
+  const getRowClass = (status) => {
+    switch (status) {
+      case "Active":
+        return "bg-green-100";
+      case "Pending":
+        return "bg-yellow-100";
+      case "Expired":
+        return "bg-red-100";
+      default:
+        return "";
+    }
+  };
+
   return (
     <div className="overflow-x-auto">
       <table className="w-full border">
@@ -29,9 +43,10 @@ const PolicyTable = ({ policies, onSort, sort }) => {
             </th>
           </tr>
         </thead>
+
         <tbody>
           {policies.map((p) => (
-            <tr key={p.id} className="border-t">
+            <tr key={p.id} className={`border-t ${getRowClass(p.status)}`}>
               <td className="p-2">{p.id}</td>
               <td className="p-2">{p.holder}</td>
               <td className="p-2">{p.status}</td>

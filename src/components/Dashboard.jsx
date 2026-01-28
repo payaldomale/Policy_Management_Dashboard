@@ -102,7 +102,7 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <h1 className="text-xl font-semibold mb-4">Policy Dashboard</h1>
+      <h1 className="text-2xl font-semibold mb-4">Policy Dashboard</h1>
 
       <Filters
         filters={filters}

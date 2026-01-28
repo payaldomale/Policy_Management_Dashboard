@@ -28,8 +28,8 @@ This project demonstrates a basic CRUD-like interface with filtering, sorting, p
 - React
 - Tailwind CSS
 - Material Tailwind
-- Hooks-based state management (no Zustand)
-- Mock data for policies (can be replaced with API)
+- Hooks-based state management 
+- Mock data for policies 
 
 ---
 
@@ -46,6 +46,8 @@ src/
 │ └─ policies.js
 ├─ hooks/
 │ └─ useDebounce.js
+├─ dashboard_img/
+│ └─ dashboard-img
 ├─ App.jsx
 ├─ index.js
 
